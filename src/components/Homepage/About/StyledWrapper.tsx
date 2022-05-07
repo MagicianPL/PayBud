@@ -43,6 +43,7 @@ const StyledWrapper = styled.div`
         bottom: -9px;
         left: 0;
         opacity: 0.2;
+        clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
     }
 }
 `;
