@@ -8,7 +8,7 @@ const StyledH = styled.h1`
 
 const Test = () => {
     return(
-        <StyledH>Testowy nagłówek</StyledH>
+        <StyledH>PAYLINK</StyledH>
     );
 };
 
