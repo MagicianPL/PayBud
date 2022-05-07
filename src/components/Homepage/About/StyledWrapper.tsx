@@ -30,7 +30,20 @@ const StyledWrapper = styled.div`
     color: ${({theme}) => theme.colors.secondary};
     text-align: left;
     font-size: 28px;
-    margin: 85px 0 45px 0;
+    margin: 100px 0 45px 0;
+    width: max-content;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 98%;
+        height: 20px;
+        background: ${({theme}) => theme.colors.secondary};
+        bottom: -9px;
+        left: 0;
+        opacity: 0.2;
+    }
 }
 `;
 
