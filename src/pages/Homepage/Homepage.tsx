@@ -4,6 +4,7 @@ import Test from '../../components/Test';
 import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrapper';
 import StyledWrapper from './StyledWrapper';
 import Logo from '../../components/Logo/Logo';
+import StyledButton from '../../components/StyledButton/StyledButton';
 
 const Homepage = () => {
     return(
@@ -18,6 +19,7 @@ const Homepage = () => {
                     </p>
                     <p className="info">Paylink to Twój osobisty system zarządzania.<br />
                         Wygeneruj link do płatności, dodawaj notatki, otrzymywaj powiadomienia SMS.</p>
+                    <StyledButton>Załóż konto</StyledButton>
                 </div>
                 <Logo />
             </div>

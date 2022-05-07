@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const StyledWrapper = styled.div`
     .flex {
         display: flex;
-        border: 1px solid yellow;
         justify-content: center;
         gap: 30px;
         align-items: center;
@@ -22,7 +21,7 @@ const StyledWrapper = styled.div`
             font-weight: normal;
             font-size: 22px;
             line-height: initial;
-            margin-top: 18px;
+            margin: 18px 0 45px 0;
             line-height: 40px;
         }
     }

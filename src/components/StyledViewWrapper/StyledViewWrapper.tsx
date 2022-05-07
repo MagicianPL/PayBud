@@ -3,8 +3,9 @@ import styled from "styled-components";
 const StyledViewWrapper = styled.div`
     width: 100%;
     max-width: 1300px;
+    min-height: 110vh;
     margin: 0 auto;
-    border: 3px solid red;
+    padding-bottom: 50px;
 `;
 
 export default StyledViewWrapper;
