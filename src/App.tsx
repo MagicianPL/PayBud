@@ -3,14 +3,14 @@ import { ThemeProvider } from "styled-components";
 
 import theme from "./theme/theme";
 import TopNavigation from "./components/TopNavigation/TopNavigation";
-import Test from "./components/Test";
+import Homepage from "./pages/Homepage/Homepage";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <TopNavigation />
-        <Test />
+        <Homepage />
       </div>
     </ThemeProvider>
   );
