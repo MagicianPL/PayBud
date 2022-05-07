@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const StyledWrapper = styled.div`
     width: 100%;
-    max-width: 250px;
-    height: 250px;
-    max-height: 250px;
+    max-width: 320px;
+    height: 320px;
+    max-height: 320px;
     border: 2px solid ${({theme}) => theme.colors.secondary};
 `;
 
