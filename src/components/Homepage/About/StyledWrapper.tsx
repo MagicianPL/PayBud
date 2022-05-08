@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
     color: ${({theme}) => theme.colors.secondary};
     text-align: left;
     font-size: 28px;
-    margin: 100px 0 45px 0;
+    margin: 100px auto 45px auto;
     width: max-content;
     position: relative;
 

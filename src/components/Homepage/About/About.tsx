@@ -1,4 +1,6 @@
 import React from 'react';
+import CountUp from 'react-countup';
+import { InView } from 'react-intersection-observer';
 
 import StyledWrapper from './StyledWrapper';
 import Logo from '../../Logo/Logo';
@@ -19,7 +21,14 @@ const About = () => {
                 </div>
                 <Logo />
             </div>
-            <p className="counter">Wygenerowaliśmy już <strong>246 paylinków</strong></p>
+            <InView triggerOnce threshold={1}>
+            {({inView, ref, entry}) => {
+                return (
+                    <p ref={ref} className="counter">Wygenerowaliśmy już <strong>{inView ? <CountUp end={26} duration={1} /> : 0} paylinków</strong></p>
+                );
+                }
+            }
+            </InView>
         </StyledWrapper>
     );
 };
