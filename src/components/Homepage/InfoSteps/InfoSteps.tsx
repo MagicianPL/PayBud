@@ -1,11 +1,20 @@
 import React from 'react';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { FaUserTie } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 
 import StyledWrapper from './StyledWrapper';
 import StyledButton from '../../StyledButton/StyledButton';
 
-const InfoStep = () => {
+const InfoSteps = () => {
+    const { ref: firstRef, inView: inViewFirst } = useInView({
+        triggerOnce: true
+    });
+
+      const { ref: secondRef, inView: inViewSecond } = useInView({
+        triggerOnce: true
+    });
+
     return(
         <StyledWrapper>
             <div className="flex">
@@ -27,11 +36,11 @@ const InfoStep = () => {
             </div>
             <div></div>
             </div>
-            <p className="footer">Chcesz tworzyć notatki nie generując linków? Żaden problem!</p>
-            <p className="footer">W Paylink to Ty masz pełną kontrolę - możesz używać konta wyłącznie jako swój osobisty system zarządzania.</p>
+            <p className={`footer ${inViewFirst && "visible"}`} ref={firstRef}>Chcesz tworzyć notatki nie generując linków? Żaden problem!</p>
+            <p className={`footer second ${inViewSecond && "visible"}`} ref={secondRef}>W Paylink to Ty masz pełną kontrolę - możesz używać konta wyłącznie jako swój osobisty system zarządzania.</p>
             <StyledButton>Zakładam konto</StyledButton>
         </StyledWrapper>
     );
 };
 
-export default InfoStep;
+export default InfoSteps;

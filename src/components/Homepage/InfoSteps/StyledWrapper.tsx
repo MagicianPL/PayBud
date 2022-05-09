@@ -40,10 +40,17 @@ p {
     .footer {
         text-align: center;
         margin-bottom: 30px;
+        opacity: 0;
+        transition: opacity 1s;
     }
 
-    .footer:nth-child(even) {
+    .footer.second {
         margin-bottom: 50px;
+        transition-delay: 0.3s;
+    }
+
+    .visible {
+        opacity: 1;
     }
 `;
 
