@@ -8,7 +8,7 @@ interface IProps {
     type?: string
     placeholder?: string
     value?: string
-    onChange: () => void
+    onChange?: () => void
 }
 
 const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange}) => {
