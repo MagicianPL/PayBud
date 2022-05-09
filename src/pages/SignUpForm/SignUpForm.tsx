@@ -4,6 +4,7 @@ import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrap
 import StyledWrapper from './StyledWrapper';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Input/Input';
+import StyledButton from '../../components/StyledButton/StyledButton';
 
 const SignUpForm = () => {
     return(
@@ -15,6 +16,7 @@ const SignUpForm = () => {
                     <Input id="email" label="Adres e-mail" type="email" pulsate />
                     <Input id="password" label="Hasło" type="password" pulsate />
                     <Input id="repeatedPassword" label="Powtórz hasło" type="password" pulsate />
+                    <StyledButton>Akceptuj</StyledButton>
                 </form>
             </StyledWrapper>
         </StyledViewWrapper>
