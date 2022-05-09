@@ -12,9 +12,9 @@ const SignUpForm = () => {
                 <PageTitle title="Załóż konto" />
                 <form>
                     <Input id="login" label="Twój login" pulsate />
-                    <Input id="email" label="Adres e-mail" pulsate />
-                    <Input id="password" label="Hasło" pulsate />
-                    <Input id="repeatedPassword" label="Powtórz hasło" pulsate />
+                    <Input id="email" label="Adres e-mail" type="email" pulsate />
+                    <Input id="password" label="Hasło" type="password" pulsate />
+                    <Input id="repeatedPassword" label="Powtórz hasło" type="password" pulsate />
                 </form>
             </StyledWrapper>
         </StyledViewWrapper>
