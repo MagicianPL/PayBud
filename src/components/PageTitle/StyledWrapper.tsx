@@ -5,27 +5,18 @@ const StyledWrapper = styled.div`
     width: max-content;
     max-height: max-content;
     margin: 0 auto 40px auto;
-    border: 2px solid ${({theme}) => theme.colors.secondary};
     position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: 93%;
-        height: 84%;
-        background: white;
-        top: 18px;
-        left: -2px;
-    }
 
     &::after {
         content: "";
         position: absolute;
-        width: 93%;
-        height: 84%;
-        background: white;
-        bottom: 18px;
-        right: -2px;
+        width: 98%;
+        height: 26px;
+        background: ${({theme}) => theme.colors.secondary};
+        bottom: 14px;
+        left: 0;
+        opacity: 0.2;
+        clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
     }
 
 h1 {
