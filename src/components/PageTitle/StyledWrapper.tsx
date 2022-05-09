@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
         content: "";
         position: absolute;
         width: 93%;
-        height: 83%;
+        height: 84%;
         background: white;
         top: 18px;
         left: -2px;
@@ -22,13 +22,14 @@ const StyledWrapper = styled.div`
         content: "";
         position: absolute;
         width: 93%;
-        height: 83%;
+        height: 84%;
         background: white;
         bottom: 18px;
         right: -2px;
     }
 
 h1 {
+    font-size: 38px;
     color: ${({theme}) => theme.colors.primary};
     margin: 0 auto 0 auto;
     padding: 25px 40px;
