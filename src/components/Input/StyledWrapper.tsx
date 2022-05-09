@@ -17,6 +17,10 @@ const StyledWrapper = styled.div`
         bottom: 30px;
     }
 
+    &.animation::after {
+        animation: pulsate 3s infinite;
+    }
+
     label, input {
             font-size: 22px;
             margin-bottom: 10px;
@@ -32,7 +36,7 @@ const StyledWrapper = styled.div`
         }
     }
 
-    @keyframes pulse {
+    @keyframes pulsate {
         0% {
             opacity: 1;
         }

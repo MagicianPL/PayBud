@@ -11,10 +11,10 @@ const SignUpForm = () => {
             <StyledWrapper>
                 <PageTitle title="Załóż konto" />
                 <form>
-                    <Input id="login" label="Twój login" />
-                    <Input id="email" label="Adres e-mail" />
-                    <Input id="password" label="Hasło" />
-                    <Input id="repeatedPassword" label="Powtórz hasło" />
+                    <Input id="login" label="Twój login" pulsate />
+                    <Input id="email" label="Adres e-mail" pulsate />
+                    <Input id="password" label="Hasło" pulsate />
+                    <Input id="repeatedPassword" label="Powtórz hasło" pulsate />
                 </form>
             </StyledWrapper>
         </StyledViewWrapper>
