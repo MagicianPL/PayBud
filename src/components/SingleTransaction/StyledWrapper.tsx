@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
         content: "";
         position: absolute;
         inset: 0;
-        border: 1px solid rgba(48, 48, 50, 0.5);
+        border: 3px solid rgba(48, 48, 50, 0.5);
         z-index: -2;
         opacity: 0;
         transition: opacity 0.5s;
