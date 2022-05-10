@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrapper';
 import StyledWrapper from './StyledWrapper';
@@ -16,6 +17,7 @@ const SignUpForm = () => {
                     <Input id="email" label="Adres e-mail" type="email" pulsate />
                     <Input id="password" label="Hasło" type="password" pulsate />
                     <Input id="repeatedPassword" label="Powtórz hasło" type="password" pulsate />
+                    <a href="/">Posiadasz już konto? Zaloguj się</a>
                     <StyledButton>Akceptuj</StyledButton>
                 </form>
             </StyledWrapper>
