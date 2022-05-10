@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+
     form {
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
+        padding: 0 12px;
 
         a {
             color: inherit;

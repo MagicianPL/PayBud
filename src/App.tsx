@@ -13,8 +13,8 @@ function App() {
       <div className="App">
         <TopNavigation />
         <Homepage />
-        {/*<SignUpForm />
-        <SignInForm />*/}
+        <SignUpForm />
+        <SignInForm />
       </div>
     </ThemeProvider>
   );
