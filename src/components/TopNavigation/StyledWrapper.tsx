@@ -4,6 +4,7 @@ const StyledWrapper = styled.div`
     width: 100%;
     min-height: 50px;
     position: relative;
+    margin-bottom: 50px;
 
     &::after {
         content: "";
