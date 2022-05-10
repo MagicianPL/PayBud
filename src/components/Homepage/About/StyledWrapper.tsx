@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+
 .flex {
     display: flex;
     justify-content: center;
     gap: 30px;
     align-items: center;
+
+    @media (max-width: 900px) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
     p {
         text-align: left;
@@ -14,6 +20,20 @@ const StyledWrapper = styled.div`
         font-size: 42px;
         line-height: 60px;
         margin: 0;
+
+        @media (max-width: 900px) {
+            line-height: 45px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        @media(max-width: 750px) {
+            font-size: 29px;
+        }
+
+        @media (min-width: 751px) and (max-width: 900px) {
+            font-size: 36px;
+        }
     }
 
     .info {
@@ -33,6 +53,13 @@ const StyledWrapper = styled.div`
     margin: 100px auto 120px auto;
     width: max-content;
     position: relative;
+
+    @media (max-width: 500px) {
+        font-size: 23px;
+    }
+    @media (max-width: 400px) {
+        font-size: 18px;
+    }
 
     &::after {
         content: "";

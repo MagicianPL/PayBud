@@ -5,7 +5,7 @@ const StyledViewWrapper = styled.div`
     max-width: 1122px;
     min-height: 110vh;
     margin: 0 auto;
-    padding-bottom: 50px;
+    padding: 0 12px 50px 12px;
 `;
 
 export default StyledViewWrapper;
