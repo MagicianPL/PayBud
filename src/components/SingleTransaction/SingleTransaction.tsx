@@ -5,12 +5,11 @@ import StyledWrapper from './StyledWrapper';
 const SingleTransaction = () => {
     return(
         <StyledWrapper>
-            <div className="singleTransaction">
-                <p><strong>TileOfTransaction</strong></p>
-                <p>Kwota: 245,00 zł</p>
-                <p>Notatki (2)</p>
-                <p>Zapłacono</p>
-            </div>
+            <div className="border"></div>
+            <p><strong>TileOfTransaction</strong></p>
+            <p>Kwota: 245,00 zł</p>
+            <p>Notatki (2)</p>
+            <p>Zapłacono</p>
         </StyledWrapper>
     );
 };
