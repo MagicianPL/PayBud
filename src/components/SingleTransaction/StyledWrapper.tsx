@@ -45,6 +45,10 @@ const StyledWrapper = styled.div`
         margin-bottom: 12px;
         font-size: 20px;
     }
+
+    .payed {
+        color: green;
+    }
 `;
 
 export default StyledWrapper;

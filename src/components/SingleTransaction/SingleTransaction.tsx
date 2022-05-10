@@ -9,7 +9,7 @@ const SingleTransaction = () => {
             <p><strong>TileOfTransaction</strong></p>
             <p>Kwota: 245,00 zł</p>
             <p>Notatki (2)</p>
-            <p>Zapłacono</p>
+            <p className="payed">Zapłacono</p>
         </StyledWrapper>
     );
 };
