@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
             }
 
             .isActive {
-                border-left: 3px solid blue;
+                border-left: 3px solid ${({theme}) => theme.colors.primary};
             }
         }
 
