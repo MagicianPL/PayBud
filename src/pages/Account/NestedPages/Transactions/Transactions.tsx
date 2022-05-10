@@ -11,6 +11,7 @@ const Transactions = () => {
             <div className="transactionsGrid">
                 <SingleTransaction />
                 <SingleTransaction />
+                <SingleTransaction />
             </div>
         </StyledWrapper>
     );
