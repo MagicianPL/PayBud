@@ -8,9 +8,25 @@ const StyledWrapper = styled.div`
         nav {
             padding: 0 15px;
             border-right: 2px solid rgba(48, 48, 50, 0.1);
+            color: ${({theme}) => theme.colors.secondary};
+
+            li {
+                font-size: 22px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: ${({theme}) => theme.colors.primary};
+                }
+            }
+
+            li:last-child {
+                margin-top: 35px;
+            }
         }
 
-        div {
+        & > div {
             padding: 12px 15px;
             flex: 1;
         }

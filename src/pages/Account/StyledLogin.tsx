@@ -4,7 +4,7 @@ const StyledLogin = styled.p`
     width: max-content;
     margin: 0 auto 25px auto;
     position: relative;
-    font-size: 22px;
+    font-size: 26px;
     color: ${({theme}) => theme.colors.primary};
     z-index: 2;
 

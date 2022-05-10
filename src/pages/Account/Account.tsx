@@ -3,6 +3,7 @@ import React from 'react';
 import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrapper';
 import StyledWrapper from './StyledWrapper';
 import StyledLogin from './StyledLogin';
+import Transactions from './NestedPages/Transactions/Transactions';
 
 const Account = () => {
     return(
@@ -15,9 +16,12 @@ const Account = () => {
                         <li>Transakcje</li>
                         <li>Notatki</li>
                         <li>Ustawienia</li>
+                        <li>Generuj link</li>
                     </ul>
                 </nav>
-                <div></div>
+                <div>
+                    <Transactions />
+                </div>
             </div>
             </StyledWrapper>
         </StyledViewWrapper>

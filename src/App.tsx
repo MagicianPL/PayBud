@@ -14,9 +14,9 @@ function App() {
       <div className="App">
         <TopNavigation />
         <Account />
-        {/*<Homepage />
+        <Homepage />
         <SignUpForm />
-  <SignInForm />*/}
+  <SignInForm />
       </div>
     </ThemeProvider>
   );
