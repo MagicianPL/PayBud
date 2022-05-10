@@ -39,7 +39,7 @@ const StyledWrapper = styled.div`
     .info {
         color: ${({theme}) => theme.colors.secondary};
         font-weight: normal;
-        font-size: 22px;
+        font-size: 21px;
         line-height: initial;
         margin: 18px 0 45px 0;
         line-height: 40px;
