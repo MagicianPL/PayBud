@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <TopNavigation />
-        {/*<Homepage />*/}
+        <Homepage />
         <SignUpForm />
 
       </div>
