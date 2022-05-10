@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
+import { NavLink, Routes, Route } from 'react-router-dom';
 
 
 import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrapper';
@@ -17,9 +17,9 @@ const Account = () => {
                 <nav>
                     <StyledLogin>MagicianPL</StyledLogin>
                     <ul>
-                        <li><Link to="/account/transactions">Transakcje</Link></li>
-                        <li><Link to="/account/notes">Notatki</Link></li>
-                        <li><Link to="/account/settings">Ustawienia</Link></li>
+                        <li><NavLink className={({isActive}) => isActive ? 'isActive' : undefined} to="/account/transactions">Transakcje</NavLink></li>
+                        <li><NavLink className={({isActive}) => isActive ? 'isActive' : undefined} to="/account/notes">Notatki</NavLink></li>
+                        <li><NavLink className={({isActive}) => isActive ? 'isActive' : undefined} to="/account/settings">Ustawienia</NavLink></li>
                         <li>Generuj link</li>
                     </ul>
                 </nav>
