@@ -8,6 +8,15 @@ const StyledWrapper = styled.div`
         font-weight: normal;
         font-size: 22px;
     }
+
+    form {
+        max-width: 420px;
+        margin: 0 auto;
+
+        & > div:nth-child(2) {
+            margin-bottom: 28px;
+        }
+    }
 `;
 
 export default StyledWrapper;
