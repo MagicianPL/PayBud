@@ -1,5 +1,10 @@
 import "./App.css";
 import { ThemeProvider } from "styled-components";
+import {
+  HashRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import theme from "./theme/theme";
 import TopNavigation from "./components/TopNavigation/TopNavigation";
@@ -12,11 +17,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+      <HashRouter>
         <TopNavigation />
-        <Account />
-        <Homepage />
-        <SignUpForm />
-  <SignInForm />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/signin" element={<SignInForm />} />
+          <Route path="/account/*" element={<Account />} />
+        </Routes>
+      </HashRouter>
       </div>
     </ThemeProvider>
   );

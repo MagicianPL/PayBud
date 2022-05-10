@@ -2,6 +2,7 @@ import React from 'react';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { FaUserTie } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 import StyledWrapper from './StyledWrapper';
 import StyledButton from '../../StyledButton/StyledButton';
@@ -38,7 +39,7 @@ const InfoSteps = () => {
             </div>
             <p className={`footer ${inViewFirst && "visible"}`} ref={firstRef}>Chcesz tworzyć notatki nie generując linków? Żaden problem!</p>
             <p className={`footer second ${inViewSecond && "visible"}`} ref={secondRef}>W Paylink to Ty masz pełną kontrolę - możesz używać konta wyłącznie jako swój osobisty system zarządzania.</p>
-            <StyledButton>Zakładam konto</StyledButton>
+            <StyledButton><Link to="/signup">Zakładam konto</Link></StyledButton>
         </StyledWrapper>
     );
 };

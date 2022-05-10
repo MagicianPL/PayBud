@@ -1,6 +1,7 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 import StyledWrapper from './StyledWrapper';
 import Logo from '../../Logo/Logo';
@@ -17,7 +18,7 @@ const About = () => {
                     </p>
                     <p className="info">Paylink to Twój osobisty system zarządzania.<br />
                         Wygeneruj link do płatności, dodawaj notatki, otrzymywaj powiadomienia SMS.</p>
-                    <StyledButton>Załóż konto</StyledButton>
+                    <StyledButton><Link to="/signup">Załóż konto</Link></StyledButton>
                 </div>
                 <Logo />
             </div>
