@@ -12,6 +12,7 @@ const Transactions = () => {
                 <SingleTransaction />
                 <SingleTransaction />
                 <SingleTransaction />
+                <SingleTransaction />
             </div>
         </StyledWrapper>
     );
