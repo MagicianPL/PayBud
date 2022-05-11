@@ -15,6 +15,14 @@ const StyledAddNoteWrapper = styled.div`
         align-items: center;
         gap: 10px;
 
+        @media (max-width: 850px) {
+            flex-direction: column;
+        }
+
+        @media (min-width: 851px) {
+            text-align: left;
+        }
+
         svg {
             font-size: 28px;
         }
