@@ -5,6 +5,7 @@ import { NavLink, Routes, Route } from 'react-router-dom';
 import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrapper';
 import StyledWrapper from './StyledWrapper';
 import StyledLogin from './StyledLogin';
+import Home from './NestedPages/Home/Home';
 import Transactions from './NestedPages/Transactions/Transactions';
 import Notes from './NestedPages/Notes/Notes';
 import AddNote from './NestedPages/Notes/AddNote';
@@ -27,6 +28,7 @@ const Account = () => {
                 </nav>
                 <div>
                     <Routes>
+                        <Route path="/" element={<Home />} />
                         <Route path="/transactions" element={<Transactions />} />
                         <Route path="/notes" element={<Notes />} />
                         <Route path="/notes/add-note" element={<AddNote />} />
