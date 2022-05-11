@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+
+button {
+    position: relative;
+    bottom: 25px;
+    font-size: 18px;
+}
+
 .notesGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

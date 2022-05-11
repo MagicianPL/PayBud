@@ -61,6 +61,10 @@ const StyledWrapper = styled.div`
     p {
         margin-bottom: 12px;
         font-size: 20px;
+
+        &.content {
+            text-align: left;
+        }
     }
 
     svg {
