@@ -44,6 +44,10 @@ const StyledWrapper = styled.div`
     .actions {
         opacity: 0;
         transition: all 0.5s;
+
+        &.hidden {
+            visibility: hidden;
+        }
     }
 
     &:hover > div.actions {
@@ -55,8 +59,12 @@ const StyledWrapper = styled.div`
         font-size: 20px;
     }
 
-    .payed {
+    .payed, .archived {
         color: green;
+    }
+
+    .archived {
+        font-weight: bold;
     }
 
     svg {
