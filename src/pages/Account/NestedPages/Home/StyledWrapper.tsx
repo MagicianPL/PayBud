@@ -69,6 +69,10 @@ const StyledWrapper = styled.div`
             text-align: left;
             flex: 1;
             cursor: pointer;
+
+            @media (max-width: 420px) {
+                font-size: 13px;
+            }
         }
     }
 `;
