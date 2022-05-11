@@ -44,6 +44,10 @@ const StyledWrapper = styled.div`
     .actions {
         opacity: 0;
         transition: all 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
 
         &.hidden {
             visibility: hidden;

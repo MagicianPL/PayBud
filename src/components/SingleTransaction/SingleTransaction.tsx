@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiInboxArchiveLine } from 'react-icons/ri';
+import { BiNote } from 'react-icons/bi';
 
 import StyledWrapper from './StyledWrapper';
 
@@ -12,6 +13,7 @@ const SingleTransaction: React.FC<IProps> = ({ archived }) => {
         <StyledWrapper>
             <div className="border"></div>
             <div className={`actions ${archived && 'hidden'}`}>
+                <BiNote title='Dodaj notatkę' />
                 <RiInboxArchiveLine title='Zarchiwizuj' />
             </div>
             <p><strong>TileOfTransaction</strong></p>
