@@ -16,6 +16,10 @@ button {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+    }
 }
 `;
 

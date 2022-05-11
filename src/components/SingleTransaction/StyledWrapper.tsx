@@ -35,6 +35,10 @@ const StyledWrapper = styled.div`
         z-index: -2;
         opacity: 0;
         transition: opacity 0.5s;
+
+        @media (max-width: 1024px) {
+            opacity: 1;
+        }
     }
 
     &:hover > div.border {
@@ -48,6 +52,10 @@ const StyledWrapper = styled.div`
         justify-content: center;
         align-items: center;
         gap: 10px;
+
+        @media (max-width: 1024px) {
+            opacity: 1;
+        }
 
         &.hidden {
             visibility: hidden;
