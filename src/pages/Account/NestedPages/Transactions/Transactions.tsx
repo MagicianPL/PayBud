@@ -8,6 +8,7 @@ const Transactions = () => {
     return(
         <StyledWrapper>
             <StyledPageSubtitle>Transakcje</StyledPageSubtitle>
+            <button className="toggling">Pokaż zarchiwizowane</button>
             <div className="transactionsGrid">
                 <SingleTransaction />
                 <SingleTransaction />

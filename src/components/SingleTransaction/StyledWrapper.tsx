@@ -41,6 +41,15 @@ const StyledWrapper = styled.div`
         opacity: 1;
     }
 
+    .actions {
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    &:hover > div.actions {
+        opacity: 1;
+    }
+
     p {
         margin-bottom: 12px;
         font-size: 20px;
@@ -48,6 +57,12 @@ const StyledWrapper = styled.div`
 
     .payed {
         color: green;
+    }
+
+    svg {
+        color: ${({theme}) => theme.colors.primary};
+        font-size: 20px;
+        cursor: pointer;
     }
 `;
 

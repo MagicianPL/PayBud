@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+    .toggling {
+        border: none;
+        background: transparent;
+        color: ${({theme}) => theme.colors.secondary};
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+        bottom: 25px;
+    }
+
     .transactionsGrid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
