@@ -31,15 +31,19 @@ p {
         }
     
         div:nth-child(even) {
-            border: 3px solid purple;
             width: 550px;
             max-width: 100%;
-            height: 300px;
+            
             margin-left: 30px;
             margin-bottom: 45px;
+            overflow: hidden;
 
             @media (max-width: 900px) {
                 margin: 0 auto 58px auto;
+            }
+
+            img {
+                width: 100%;
             }
         }
     }

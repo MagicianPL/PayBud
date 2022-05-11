@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 import StyledWrapper from './StyledWrapper';
 import StyledButton from '../../StyledButton/StyledButton';
+import generatePaylink from '../../../assets/generatePaylink.jpg';
+import transactions from '../../../assets/transactions.jpg';
 
 const InfoSteps = () => {
     const { ref: firstRef, inView: inViewFirst } = useInView({
@@ -25,7 +27,9 @@ const InfoSteps = () => {
                 <p> Po opłaceniu dostajesz powiadomienie sms, a pieniądze trafiają na Twoje konto!</p>
                 <p>Przyjemnie, łatwo i intuicyjnie!</p>
             </div>
-            <div></div>
+            <div>
+                <img src={generatePaylink} alt="Generating Paylink Thumbnail" />
+            </div>
             </div>
 
             <div className="flex">
@@ -35,7 +39,9 @@ const InfoSteps = () => {
                 <p>Każdy wygenerowany link, to osobna transakcja, do której możesz przypiąć notatki oraz nimi zarządzać.</p>
                 <p>Twoja sprzedaż w jednym miejscu - Z Paylink to proste!</p>
             </div>
-            <div></div>
+            <div>
+                <img src={transactions} alt="Transactions Thumbnail" />
+            </div>
             </div>
             <p className={`footer ${inViewFirst && "visible"}`} ref={firstRef}>Chcesz tworzyć notatki nie generując linków? Żaden problem!</p>
             <p className={`footer second ${inViewSecond && "visible"}`} ref={secondRef}>W Paylink to Ty masz pełną kontrolę - możesz używać konta wyłącznie jako swój osobisty system zarządzania.</p>
