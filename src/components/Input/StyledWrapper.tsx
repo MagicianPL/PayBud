@@ -17,16 +17,20 @@ const StyledWrapper = styled.div`
         bottom: 30px;
     }
 
+    &.normal::after {
+        display: none;
+    }
+
     &.animation::after {
         animation: pulsate 3s infinite;
     }
 
-    label, input {
+    label, input, textarea {
             font-size: 22px;
             margin-bottom: 10px;
         };
 
-    input {
+    input, textarea {
         margin-bottom: 30px;
         padding: 5px 8px;
         border: none;
@@ -34,6 +38,13 @@ const StyledWrapper = styled.div`
         &:focus {
             outline: none;
         }
+    };
+
+    textarea {
+        width: 100%;
+        max-width: 800px;
+        border: 2px solid ${({theme}) => theme.colors.primary};
+        text-align: left;
     }
 
     @keyframes pulsate {

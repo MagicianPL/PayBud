@@ -10,9 +10,10 @@ interface IProps {
     value?: string
     onChange?: () => void
     pulsate?: boolean
+    className?: string
 }
 
-const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange, pulsate}) => {
+const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange, pulsate, className }) => {
     const inputRef = useRef(null);
     const wrapperRef = useRef(null);
     const [inputOnFocus, setInputOnFocus] = useState(false);
@@ -25,6 +26,13 @@ const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange
     const onBlur = () => {
         setInputOnFocus(false);
     }
+
+    if (type === 'textarea') return (
+        <StyledWrapper ref={wrapperRef} className={inputOnFocus ? "animation" + className : className}>
+            <label htmlFor={id}>{label}</label>
+            <textarea id={id} placeholder={placeholder && placeholder} value={value} />
+        </StyledWrapper>
+    );
 
     return(
         <StyledWrapper ref={wrapperRef} className={inputOnFocus ? "animation" : undefined}>
