@@ -5,6 +5,11 @@ const StyledWrapper = styled.div`
     min-height: 50px;
     position: relative;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    color: ${({theme}) => theme.colors.primary};
 
     &::after {
         content: "";
@@ -16,6 +21,24 @@ const StyledWrapper = styled.div`
         height: 1px;
         background: ${({theme}) => theme.colors.secondary};
         opacity: 0.1;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    li, p {
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+            color: ${({theme}) => theme.colors.secondary};
+        }
     }
 
 `;
