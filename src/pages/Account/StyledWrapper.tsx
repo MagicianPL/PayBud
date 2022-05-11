@@ -10,6 +10,10 @@ const StyledWrapper = styled.div`
             border-right: 2px solid rgba(48, 48, 50, 0.1);
             color: ${({theme}) => theme.colors.secondary};
 
+            @media (max-width: 550px) {
+                padding: 0 5px;
+            }
+
             ul {
                 width: 100%;
             }
@@ -23,6 +27,10 @@ const StyledWrapper = styled.div`
 
                 &:hover {
                     color: ${({theme}) => theme.colors.primary};
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 14px;
                 }
             }
 

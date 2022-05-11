@@ -8,6 +8,10 @@ const StyledLogin = styled.p`
     color: ${({theme}) => theme.colors.primary};
     z-index: 2;
 
+    @media (max-width: 550px) {
+        font-size: 15px;
+    }
+
     &::after {
         content: "";
         position: absolute;

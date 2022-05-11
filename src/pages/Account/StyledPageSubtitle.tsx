@@ -11,6 +11,10 @@ const StyledPageSubtitle = styled(StyledLogin)`
     &::after {
         height: 22px;
     }
+
+    @media (max-width: 550px) {
+        font-size: 30px;
+    }
 `;
 
 export default StyledPageSubtitle;

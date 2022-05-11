@@ -20,8 +20,12 @@ const StyledWrapper = styled.div`
         max-width: 900px;
         margin: 0 auto;
 
-        @media (max-width: 420px) {
+        @media (max-width: 800px) {
             grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 801px) and (max-width: 880px) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 `;
