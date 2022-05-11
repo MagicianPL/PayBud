@@ -50,6 +50,27 @@ const StyledWrapper = styled.div`
             font-size: 18px;
         }
     }
+
+    .terms {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+
+        input {
+            width: 20px;
+            height: 20px;
+            accent-color: ${({theme}) => theme.colors.secondary};
+            position: relative;
+            top: 4px;
+            cursor: pointer;
+        }
+
+        label {
+            text-align: left;
+            flex: 1;
+            cursor: pointer;
+        }
+    }
 `;
 
 export default StyledWrapper;

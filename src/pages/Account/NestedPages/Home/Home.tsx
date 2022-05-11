@@ -15,6 +15,10 @@ const Home = () => {
             </p>
             <form>
                 <Input id="accountNumber" label="Wpisz poprawny numer swojego konta bankowego" type="number" />
+                <div className="terms">
+                    <input type="checkbox" id="terms" />
+                    <label htmlFor='terms'>Ze względów bezpieczeństwa Twój numer konta bankowego zostanie zaszyfrowany i będzie przetwarzany tylko po stronie serwera. Zaznaczając to pole akceptujesz powyższe warunki.</label>
+                </div>
                 <StyledButton>Powiąż</StyledButton>
             </form>
         </StyledWrapper>
