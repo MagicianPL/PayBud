@@ -12,6 +12,25 @@ const StyledModal = styled.div`
     transform: translateX(-50%);
     opacity: 0;
     animation: slideFromTop 1s forwards;
+    color: ${({theme}) => theme.colors.primary};
+    padding: 25px;
+
+    * {
+        text-align: center;
+    }
+
+    svg {
+        font-size: 50px;
+    }
+
+    .modalBody {
+        margin: 35px 0 50px 0;
+        font-size: 18px;
+
+        p {
+            line-height: 28px;
+        }
+    }
 
     @keyframes slideFromTop {
         100% {
