@@ -1,23 +1,14 @@
-import React, { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Navigate } from 'react-router';
 
 import UserContext from '../context/UserContext';
 
-const RequireAuth: React.FC<{children: any}> = ({ children }) => {
+const RequireAuth: React.FC<{children: JSX.Element}> = ({ children }) => {
     const [user] = useContext(UserContext);
-    const navigate = useNavigate();
 
-    useEffect(() => {
-        if(!user) {
-            navigate("/signin");
-        }
-    }, [user, navigate]);
+    if(!user) return <Navigate to="/signin" replace />
 
-    return(
-        <>
-        {user ? children : null}
-        </>
-    );
+    return children
 };
 
 export default RequireAuth;
