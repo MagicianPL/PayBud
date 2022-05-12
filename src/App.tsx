@@ -13,10 +13,12 @@ import SignUpForm from './pages/SignUpForm/SignUpForm';
 import SignInForm from "./pages/SignInForm/SignInForm";
 import Account from "./pages/Account/Account";
 import ScrollToTop from "./components/ScrollToTop";
+import UserContext from "./context/UserContext";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+    <UserContext.Provider value={{username: 'Magician'}}>
       <div className="App">
       <HashRouter>
       <ScrollToTop />
@@ -29,6 +31,7 @@ function App() {
         </Routes>
       </HashRouter>
       </div>
+    </UserContext.Provider>
     </ThemeProvider>
   );
 }
