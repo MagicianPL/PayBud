@@ -46,6 +46,10 @@ const StyledWrapper = styled.div`
     }
 }
 
+.logo {
+    align-self: flex-start;
+}
+
 .counter {
     color: ${({theme}) => theme.colors.secondary};
     text-align: left;

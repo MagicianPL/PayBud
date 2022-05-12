@@ -20,7 +20,9 @@ const About = () => {
                         Wygeneruj link do płatności, dodawaj notatki, otrzymywaj powiadomienia SMS.</p>
                     <StyledButton><Link to="/signup">Załóż konto</Link></StyledButton>
                 </div>
-                <Logo />
+                <div className="logo">
+                    <Logo />
+                </div>
             </div>
             <InView triggerOnce threshold={1}>
             {({inView, ref, entry}) => {

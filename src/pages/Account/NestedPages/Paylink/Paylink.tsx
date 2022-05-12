@@ -4,6 +4,7 @@ import StyledWrapper from './StyledWrapper';
 import StyledPageSubtitle from '../../StyledPageSubtitle';
 import Input from '../../../../components/Input/Input';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
+import Modal from '../../../../components/Modal/Modal';
 
 const Paylink = () => {
     return(
@@ -15,6 +16,7 @@ const Paylink = () => {
                 <Input type="number" id="amount" label="Kwota" placeholder="Kwota PLN" />
                 <StyledButton>Generuj</StyledButton>
             </form>
+            <Modal showCostInfo />
         </StyledWrapper>
     );
 };

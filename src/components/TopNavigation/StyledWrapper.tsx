@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
     }
 
     .logo {
-        height: 40px;
+        width: 45px;
     }
 
     ul {

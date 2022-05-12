@@ -4,7 +4,6 @@ import { BsInfoCircle } from 'react-icons/bs';
 import StyledWrapper from './StyledWrapper';
 import Input from '../../../../components/Input/Input';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
-import Modal from '../../../../components/Modal/Modal';
 
 const Home = () => {
     return(
@@ -22,7 +21,6 @@ const Home = () => {
                 </div>
                 <StyledButton>Powiąż</StyledButton>
             </form>
-            <Modal />
         </StyledWrapper>
     );
 };
