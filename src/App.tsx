@@ -14,11 +14,12 @@ import SignInForm from "./pages/SignInForm/SignInForm";
 import Account from "./pages/Account/Account";
 import ScrollToTop from "./components/ScrollToTop";
 import UserContext from "./context/UserContext";
+import RequireAuth from "./ProtectedRoutes/RequireAuth";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <UserContext.Provider value={{username: 'Magician'}}>
+    <UserContext.Provider value={null}>
       <div className="App">
       <HashRouter>
       <ScrollToTop />
@@ -27,7 +28,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/signup" element={<SignUpForm />} />
           <Route path="/signin" element={<SignInForm />} />
-          <Route path="/account/*" element={<Account />} />
+          <Route path="/account/*" element={<RequireAuth><Account /></RequireAuth>} />
         </Routes>
       </HashRouter>
       </div>
