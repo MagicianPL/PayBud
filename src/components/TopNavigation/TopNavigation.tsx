@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import StyledWrapper from './StyledWrapper';
 import Logo from '../Logo/Logo';
+import UserContext from '../../context/UserContext';
+import useSignOut from '../../hooks/useSignOut';
 
 const TopNavigation = () => {
+    const [user] = useContext(UserContext);
+    const { signOut } = useSignOut();
+
     return(
         <StyledWrapper>
             <div className="logo">
@@ -14,7 +19,11 @@ const TopNavigation = () => {
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/account">KONTO</Link></li>
             </ul>
-            <p><Link to="/signin">Zaloguj</Link></p>
+            <p> {!user ?
+                <Link to="/signin">Zaloguj</Link>
+                :
+                <span onClick={signOut}>Wyloguj</span>}
+            </p>
         </StyledWrapper>
     );
 };

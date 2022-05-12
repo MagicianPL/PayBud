@@ -9,7 +9,7 @@ import StyledButton from '../../components/StyledButton/StyledButton';
 import UserContext from '../../context/UserContext';
 
 const SignInForm = () => {
-    const [user, setUser] = useContext(UserContext);
+    const [, setUser] = useContext(UserContext);
     const navigate = useNavigate();
 
     const signIn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
