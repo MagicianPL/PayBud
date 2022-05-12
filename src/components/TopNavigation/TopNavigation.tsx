@@ -14,7 +14,7 @@ const TopNavigation = () => {
                 <li><Link to="/">HOME</Link></li>
                 <li><Link to="/account">KONTO</Link></li>
             </ul>
-            <p>Wyloguj</p>
+            <p><Link to="/signup">Zarejestruj</Link></p>
         </StyledWrapper>
     );
 };
