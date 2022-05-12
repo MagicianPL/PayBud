@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import StyledWrapper from './StyledWrapper';
 import Logo from '../Logo/Logo';
@@ -10,8 +11,8 @@ const TopNavigation = () => {
                 <Logo />
             </div>
             <ul>
-                <li>HOME</li>
-                <li>KONTO</li>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/account">KONTO</Link></li>
             </ul>
             <p>Wyloguj</p>
         </StyledWrapper>
