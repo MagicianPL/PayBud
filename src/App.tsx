@@ -12,12 +12,14 @@ import Homepage from "./pages/Homepage/Homepage";
 import SignUpForm from './pages/SignUpForm/SignUpForm';
 import SignInForm from "./pages/SignInForm/SignInForm";
 import Account from "./pages/Account/Account";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
       <HashRouter>
+      <ScrollToTop />
         <TopNavigation />
         <Routes>
           <Route path="/" element={<Homepage />} />
