@@ -47,7 +47,9 @@ const StyledWrapper = styled.div`
 }
 
 .logo {
-    align-self: flex-start;
+    @media (min-width: 901px) {
+        align-self: flex-start;
+    }
 }
 
 .counter {
