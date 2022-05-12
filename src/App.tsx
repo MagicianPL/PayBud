@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from 'react';
 import { ThemeProvider } from "styled-components";
 import {
   HashRouter,
@@ -15,11 +16,14 @@ import Account from "./pages/Account/Account";
 import ScrollToTop from "./components/ScrollToTop";
 import UserContext from "./context/UserContext";
 import RequireAuth from "./ProtectedRoutes/RequireAuth";
+import React from "react";
 
 function App() {
+  const [user, setUser] = useState();
+
   return (
     <ThemeProvider theme={theme}>
-    <UserContext.Provider value={null}>
+    <UserContext.Provider value={[user, setUser]}>
       <div className="App">
       <HashRouter>
       <ScrollToTop />
