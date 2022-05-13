@@ -26,8 +26,16 @@ const StyledWrapper = styled.div`
     }
 
     label, input, textarea {
-            font-size: 22px;
+            font-size: 18px;
             margin-bottom: 10px;
+
+            @media (min-width: 450px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 380px) {
+                font-size: 14px;
+            }
         };
 
     input, textarea {

@@ -30,7 +30,7 @@ const Modal: React.FC<IProps> = ({ showCostInfo, modalMessage, modalError, onCli
                         {showCostInfo && costInfo}
                         { modalMessage && <p>{modalMessage}</p> }
                         { modalError && <p className="error">{modalError}</p> }
-                        { (!modalMessage && !modalError) &&
+                        { (!modalMessage && !modalError && !showCostInfo) &&
                             <div className="loading">
                             <Oval
                             ariaLabel="loading-indicator"
@@ -45,7 +45,7 @@ const Modal: React.FC<IProps> = ({ showCostInfo, modalMessage, modalError, onCli
                         }
                     </div>
                     <footer>
-                        { (modalMessage || modalError) && 
+                        { (modalMessage || modalError || showCostInfo) && 
                         <StyledButton onClick={onClick}>OK</StyledButton>
                         }
                     </footer>

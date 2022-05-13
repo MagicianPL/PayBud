@@ -16,7 +16,7 @@ const Paylink = () => {
                 <Input type="number" id="amount" label="Kwota" placeholder="Kwota PLN" />
                 <StyledButton>Generuj</StyledButton>
             </form>
-            <Modal showCostInfo />
+            {/*<Modal showCostInfo />*/}
         </StyledWrapper>
     );
 };
