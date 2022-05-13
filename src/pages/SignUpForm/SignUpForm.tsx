@@ -6,10 +6,11 @@ import StyledWrapper from './StyledWrapper';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Input/Input';
 import StyledButton from '../../components/StyledButton/StyledButton';
+import Modal from '../../components/Modal/Modal';
 import useUserRegistration from '../../hooks/useUserRegistration';
 
 const SignUpForm = () => {
-    const { registerUser } = useUserRegistration();
+    const { registerUser, showModal, modalMessage, modalError, onModalClick } = useUserRegistration();
 
     const initialFormValues = {
         login: "",
@@ -40,6 +41,7 @@ const SignUpForm = () => {
                     <StyledButton>Akceptuj</StyledButton>
                 </form>
             </StyledWrapper>
+            {showModal && <Modal onClick={onModalClick} modalMessage={modalMessage} modalError={modalError} />}
         </StyledViewWrapper>
     );
 };

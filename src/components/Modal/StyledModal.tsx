@@ -30,6 +30,18 @@ const StyledModal = styled.div`
         p {
             line-height: 28px;
         }
+
+        .error {
+            color: red;
+        }
+    }
+
+    .loading {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @keyframes slideFromTop {
