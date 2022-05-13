@@ -20,7 +20,6 @@ const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange
     const [inputOnFocus, setInputOnFocus] = useState(false);
 
     const onFocus = () => {
-        console.log(inputRef.current);
         setInputOnFocus(true);
     };
 

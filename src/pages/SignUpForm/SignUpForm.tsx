@@ -6,8 +6,11 @@ import StyledWrapper from './StyledWrapper';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Input/Input';
 import StyledButton from '../../components/StyledButton/StyledButton';
+import useUserRegistration from '../../hooks/useUserRegistration';
 
 const SignUpForm = () => {
+    const { registerUser } = useUserRegistration();
+
     const initialFormValues = {
         login: "",
         email: "",
@@ -22,14 +25,13 @@ const SignUpForm = () => {
             ...formValues,
             [e.target.name]: e.target.value
         });
-        console.log(formValues);
     };
 
     return(
         <StyledViewWrapper>
             <StyledWrapper>
                 <PageTitle title="Załóż konto" />
-                <form>
+                <form onSubmit={(e) => registerUser(e, formValues)}>
                     <Input id="login" name="login" label="Twój login" pulsate value={formValues.login} onChange={handleInputChange} />
                     <Input id="email" name="email" label="Adres e-mail" type="email" pulsate value={formValues.email} onChange={handleInputChange} />
                     <Input id="password" name="password" label="Hasło" type="password" pulsate value={formValues.password} onChange={handleInputChange} />
