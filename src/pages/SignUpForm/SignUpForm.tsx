@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import StyledViewWrapper from '../../components/StyledViewWrapper/StyledViewWrapper';
@@ -8,15 +8,32 @@ import Input from '../../components/Input/Input';
 import StyledButton from '../../components/StyledButton/StyledButton';
 
 const SignUpForm = () => {
+    const initialFormValues = {
+        login: "",
+        email: "",
+        password: "",
+        repeatedPassword: ""
+    };
+
+    const [formValues, setFormValues] = useState(initialFormValues);
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        });
+        console.log(formValues);
+    };
+
     return(
         <StyledViewWrapper>
             <StyledWrapper>
                 <PageTitle title="Załóż konto" />
                 <form>
-                    <Input id="login" label="Twój login" pulsate />
-                    <Input id="email" label="Adres e-mail" type="email" pulsate />
-                    <Input id="password" label="Hasło" type="password" pulsate />
-                    <Input id="repeatedPassword" label="Powtórz hasło" type="password" pulsate />
+                    <Input id="login" name="login" label="Twój login" pulsate value={formValues.login} onChange={handleInputChange} />
+                    <Input id="email" name="email" label="Adres e-mail" type="email" pulsate value={formValues.email} onChange={handleInputChange} />
+                    <Input id="password" name="password" label="Hasło" type="password" pulsate value={formValues.password} onChange={handleInputChange} />
+                    <Input id="repeatedPassword" name="repeatedPassword" label="Powtórz hasło" type="password" pulsate value={formValues.repeatedPassword} onChange={handleInputChange} />
                     <Link to="/signin">Posiadasz już konto? Zaloguj się</Link>
                     <StyledButton>Akceptuj</StyledButton>
                 </form>

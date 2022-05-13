@@ -8,12 +8,13 @@ interface IProps {
     type?: string
     placeholder?: string
     value?: string
-    onChange?: () => void
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    name?: string
     pulsate?: boolean
     className?: string
 }
 
-const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange, pulsate, className }) => {
+const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange, name, pulsate, className }) => {
     const inputRef = useRef(null);
     const wrapperRef = useRef(null);
     const [inputOnFocus, setInputOnFocus] = useState(false);
@@ -37,7 +38,7 @@ const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange
     return(
         <StyledWrapper ref={wrapperRef} className={inputOnFocus ? "animation" : undefined}>
             <label htmlFor={id}>{label}</label>
-            <input id={id} type={type ? type : 'text'} placeholder={placeholder && placeholder} value={value} ref={inputRef} onFocus={pulsate ? onFocus : undefined} onBlur={pulsate ? onBlur : undefined} />
+            <input id={id} type={type ? type : 'text'} name={name} placeholder={placeholder && placeholder} value={value} onChange={onChange} ref={inputRef} onFocus={pulsate ? onFocus : undefined} onBlur={pulsate ? onBlur : undefined} />
         </StyledWrapper>
     );
 };
