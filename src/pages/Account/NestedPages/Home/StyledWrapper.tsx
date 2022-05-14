@@ -31,6 +31,26 @@ const StyledWrapper = styled.div`
         }
     }
 
+    .connected {
+        p {
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button {
+            font-size: 20px;
+
+            @media (max-width: 390px) {
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: red;
+            }
+        }
+    }
+
     form {
         width: 100%;
         max-width: 510px;

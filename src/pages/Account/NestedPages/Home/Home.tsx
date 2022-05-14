@@ -50,6 +50,15 @@ const Home: React.FC<IProps> = ({ user }) => {
             </form>
             </>
             }
+            {(user?.bankAccount && user?.phoneNumber) &&
+                <div className="connected">
+                    <p className="info">
+                    <BsInfoCircle />
+                    Konto poprawnie powiązane z Twoim numerem telefonu oraz numerem konta bankowego.
+                    </p>
+                    <StyledButton>Usuń powiązane dane</StyledButton>
+                </div>
+            }
             { showModal && <Modal modalMessage={modalMessage} modalError={modalError} onClick={onModalClick} /> }
         </StyledWrapper>
     );
