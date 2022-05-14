@@ -6,8 +6,12 @@ import StyledSignInWrapper from './StyledSignInWrapper';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Input from '../../components/Input/Input';
 import StyledButton from '../../components/StyledButton/StyledButton';
+import Modal from '../../components/Modal/Modal';
+import useSigningIn from '../../hooks/useSigningIn';
 
 const SignInForm = () => {
+    const { signingIn, showModal, modalError, onModalClick } = useSigningIn();
+
     const initialFormValues = {
         email: "",
         password: ""
@@ -26,13 +30,14 @@ const SignInForm = () => {
         <StyledViewWrapper>
             <StyledSignInWrapper>
                 <PageTitle title="Zaloguj" />
-                <form>
+                <form onSubmit={e => signingIn(e, formValues)}>
                     <Input id="email" name="email" label="Adres e-mail" type="email" pulsate value={formValues.email} onChange={handleInputChange} />
                     <Input id="password" name="password" label="Hasło" type="password" pulsate value={formValues.password} onChange={handleInputChange} />
                     <Link to="/signup">Nie masz jeszcze konta? Zarejestruj się</Link>
                     <StyledButton>Akceptuj</StyledButton>
                 </form>
             </StyledSignInWrapper>
+            { showModal && <Modal modalError={modalError} onClick={onModalClick} /> }
         </StyledViewWrapper>
     );
 };
