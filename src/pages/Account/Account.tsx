@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 
 
@@ -11,14 +11,17 @@ import Notes from './NestedPages/Notes/Notes';
 import AddNote from './NestedPages/Notes/AddNote';
 import Settings from './NestedPages/Settings/Settings';
 import Paylink from './NestedPages/Paylink/Paylink';
+import UserContext from '../../context/UserContext';
 
 const Account = () => {
+    const [user] = useContext(UserContext);
+
     return(
         <StyledViewWrapper>
             <StyledWrapper>
             <div className="flex">
                 <nav>
-                    <StyledLogin>MagicianPL</StyledLogin>
+                    <StyledLogin>{user?.login}</StyledLogin>
                     <ul>
                         <li><NavLink className={({isActive}) => isActive ? 'isActive' : undefined} to="/account/transactions">Transakcje</NavLink></li>
                         <li><NavLink className={({isActive}) => isActive ? 'isActive' : undefined} to="/account/notes">Notatki</NavLink></li>
