@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import UserContext from '../context/UserContext';
 import useModal from './useModal';
 
 const useSigningIn = () => {
+    const [, setUser] = useContext(UserContext);
     const navigate = useNavigate();
     const { showModal, setShowModal, modalError, setModalError } = useModal();
 
@@ -31,6 +34,7 @@ const useSigningIn = () => {
         if(!res.ok) return setModalError(data.message);
 
         //Success
+        setUser(data);
         navigate('/account');
         setShowModal(false);
         setModalError("");
