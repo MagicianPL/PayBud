@@ -31,7 +31,7 @@ const Account = () => {
                 </nav>
                 <div>
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Home user={user} />} />
                         <Route path="/transactions" element={<Transactions />} />
                         <Route path="/notes" element={<Notes />} />
                         <Route path="/notes/add-note" element={<AddNote />} />
