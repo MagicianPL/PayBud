@@ -6,6 +6,7 @@ import Input from '../../../../components/Input/Input';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
 import Modal from '../../../../components/Modal/Modal';
 import useUpdateBankAccount from '../../../../hooks/useUpdateBankAccount';
+import useDeleteConnectedData from '../../../../hooks/useDeleteConnectedData';
 
 interface IProps {
     user: any
@@ -13,6 +14,7 @@ interface IProps {
 
 const Home: React.FC<IProps> = ({ user }) => {
     const { updateBankAccount, showModal, modalMessage, modalError, onModalClick } = useUpdateBankAccount();
+    const { deleteConnectedData, showModal: delete_showModal, modalMessage: delete_modalMessage, modalError: delete_modalError, onModalClick: delete_onModalClick } = useDeleteConnectedData();
     const [bankAccount, setBankAccount] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     //checkbox
@@ -56,10 +58,11 @@ const Home: React.FC<IProps> = ({ user }) => {
                     <BsInfoCircle />
                     Konto poprawnie powiązane z Twoim numerem telefonu oraz numerem konta bankowego.
                     </p>
-                    <StyledButton>Usuń powiązane dane</StyledButton>
+                    <StyledButton onClick={deleteConnectedData}>Usuń powiązane dane</StyledButton>
                 </div>
             }
             { showModal && <Modal modalMessage={modalMessage} modalError={modalError} onClick={onModalClick} /> }
+            { delete_showModal && <Modal modalMessage={delete_modalMessage} modalError={delete_modalError} onClick={delete_onModalClick} /> }
         </StyledWrapper>
     );
 };
