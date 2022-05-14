@@ -19,7 +19,12 @@ import RequireAuth from "./ProtectedRoutes/RequireAuth";
 import React from "react";
 
 function App() {
-  const [user, setUser] = useState();
+  //User from localStorage || undefined
+  const [user, setUser] = useState(
+    window.localStorage.getItem("paylink_user") ?
+    JSON.parse(window.localStorage.getItem("paylink_user") || '{}') :
+    undefined
+  );
 
   return (
     <ThemeProvider theme={theme}>

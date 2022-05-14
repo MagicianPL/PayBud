@@ -38,6 +38,7 @@ const useSigningIn = () => {
         navigate('/account');
         setShowModal(false);
         setModalError("");
+        window.localStorage.setItem("paylink_user", JSON.stringify(data));
     };
 
     const onModalClick = () => {
