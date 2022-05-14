@@ -19,7 +19,7 @@ const SignInForm = () => {
             login: "Magician",
             email: "email@email.com"
         });
-
+        
         navigate("/account");
     };
 
