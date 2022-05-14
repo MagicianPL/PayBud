@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import StyledWrapper from './StyledWrapper';
 import Logo from '../Logo/Logo';
 import UserContext from '../../context/UserContext';
-import useSignOut from '../../hooks/useSignOut';
+import useSigningOut from '../../hooks/useSigningOut';
 
 const TopNavigation = () => {
     const [user] = useContext(UserContext);
-    const { signOut } = useSignOut();
+    const { signOut } = useSigningOut();
 
     return(
         <StyledWrapper>
