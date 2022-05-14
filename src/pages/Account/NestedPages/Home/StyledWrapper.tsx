@@ -37,7 +37,7 @@ const StyledWrapper = styled.div`
         margin: 0 auto;
 
         & > div:nth-child(2) {
-            margin-bottom: 28px;
+            margin-bottom: -10px;
         }
 
         input {
@@ -55,6 +55,7 @@ const StyledWrapper = styled.div`
         display: flex;
         gap: 10px;
         cursor: pointer;
+        margin-bottom: 35px;
 
         input {
             width: 20px;
