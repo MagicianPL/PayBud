@@ -6,9 +6,13 @@ import StyledWrapper from './StyledWrapper';
 
 interface IProps {
     archived?: boolean
+    title: string
+    amount?: string
+    status: string
+    notes: []
 }
 
-const SingleTransaction: React.FC<IProps> = ({ archived }) => {
+const SingleTransaction: React.FC<IProps> = ({ archived, title, amount, status, notes }) => {
     return(
         <StyledWrapper>
             <div className="border"></div>
@@ -16,11 +20,11 @@ const SingleTransaction: React.FC<IProps> = ({ archived }) => {
                 <BiNote title='Dodaj notatkę' />
                 <RiInboxArchiveLine title='Zarchiwizuj' />
             </div>
-            <p><strong>TileOfTransaction</strong></p>
-            <p>Kwota: 245,00 zł</p>
-            <p>Notatki (2)</p>
+            <p><strong>{title}</strong></p>
+            <p>{amount ? `Kwota: ${amount} zł` : 'Kwota: -'}</p>
+            <p>Notatki ({notes.length})</p>
             { !archived ?
-            <p className="payed">Zapłacono</p>
+            <p className="payed">{status}</p>
             :
             <p className="archived">Zarchiwizowano</p>
             }

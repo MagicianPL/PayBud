@@ -18,8 +18,7 @@ const useGetTransactions = () => {
 
         if (!res.ok) return setFetchingError(data.message);
 
-        setTransactionsOfSpecificUser(data);
-        console.log(data);
+        setTransactionsOfSpecificUser(data.reverse());
     };
 
     return { getTransactions, fetchingError, transactionsOfSpecificUser };
