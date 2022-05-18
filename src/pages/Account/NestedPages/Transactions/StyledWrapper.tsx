@@ -35,6 +35,10 @@ const StyledWrapper = styled.div`
             grid-template-columns: 1fr 1fr;
         }
     }
+
+    svg {
+        margin: 0 auto;
+    }
 `;
 
 export default StyledWrapper;
