@@ -47,14 +47,14 @@ const Transactions = () => {
                     {showArchivedTransactions ?
                     <>
                     {transactionsOfSpecificUser.map((transaction: any) => {
-                        if (transaction.isArchived) return <SingleTransaction key={transaction._id} title={transaction.title} amount={transaction.amount} status={transaction.status} notes={transaction.notes} archived />
+                        if (transaction.isArchived) return <SingleTransaction key={transaction._id} title={transaction.title} amount={transaction.amount} status={transaction.status} notes={transaction.notes} id={transaction._id} archived />
                         return null
                     })}
                     </>
                     :
                     <>
                     {transactionsOfSpecificUser.map((transaction: any) => {
-                        if (!transaction.isArchived) return <SingleTransaction key={transaction._id} title={transaction.title} amount={transaction.amount} status={transaction.status} notes={transaction.notes} />
+                        if (!transaction.isArchived) return <SingleTransaction key={transaction._id} title={transaction.title} amount={transaction.amount} status={transaction.status} notes={transaction.notes} id={transaction._id} />
                         return null
                     })}
                     </>
