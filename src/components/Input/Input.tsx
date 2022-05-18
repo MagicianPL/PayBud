@@ -8,7 +8,7 @@ interface IProps {
     type?: string
     placeholder?: string
     value?: string
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChange?: any
     name?: string
     pulsate?: boolean
     className?: string
@@ -30,7 +30,7 @@ const Input: React.FC<IProps> = ({ id, label, type, placeholder, value, onChange
     if (type === 'textarea') return (
         <StyledWrapper ref={wrapperRef} className={inputOnFocus ? "animation" + className : className}>
             <label htmlFor={id}>{label}</label>
-            <textarea id={id} placeholder={placeholder && placeholder} value={value} />
+            <textarea id={id} placeholder={placeholder && placeholder} value={value} onChange={onChange} />
         </StyledWrapper>
     );
 
