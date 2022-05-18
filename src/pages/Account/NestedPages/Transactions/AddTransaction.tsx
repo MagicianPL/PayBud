@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsInfoCircle } from 'react-icons/bs';
 
 import StyledAddTransactionWrapper from './StyledAddTransactionWrapper';
@@ -7,6 +7,12 @@ import Input from '../../../../components/Input/Input';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
 
 const AddTransaction = () => {
+    const [checkedStatus, setCheckedStatus] = useState("Oczekująca");
+
+    const handleStatusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCheckedStatus(e.target.value);
+    };
+
     return(
         <StyledAddTransactionWrapper>
             <StyledPageSubtitle>Dodaj transakcję</StyledPageSubtitle>
@@ -15,16 +21,16 @@ const AddTransaction = () => {
                 <Input id="transaction-amount" label="Kwota (opcjonalnie)" type="number" />
                 <p>Status Transakcji</p>
                 <div className="status">
-                <label className="container">Oczekujący
-                <input type="radio" name="status" />
+                <label className="container">Oczekująca
+                <input type="radio" name="status" checked={checkedStatus === "Oczekująca"} value="Oczekująca" onChange={handleStatusChange} />
                 <span className="checkmark"></span>
                 </label>
-                <label className="container">Zapłacono
-                <input type="radio" name="status" />
+                <label className="container">Zapłacona
+                <input type="radio" name="status" checked={checkedStatus === "Zapłacona"} value="Zapłacona" onChange={handleStatusChange} />
                 <span className="checkmark"></span>
                 </label>
-                <label className="container">Niezapłacono
-                <input type="radio" name="status" />
+                <label className="container">Niezapłacona
+                <input type="radio" name="status" checked={checkedStatus === "Niezapłacona"} value="Niezapłacona" onChange={handleStatusChange} />
                 <span className="checkmark"></span>
                 </label>
                 </div>
