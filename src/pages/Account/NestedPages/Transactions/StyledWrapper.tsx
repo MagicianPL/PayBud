@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+    button {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        bottom: 25px;
+        font-size: 18px;
+    }
+
     .toggling {
         border: none;
         background: transparent;
         color: ${({theme}) => theme.colors.secondary};
         font-size: 20px;
         cursor: pointer;
-        position: relative;
-        bottom: 25px;
+        bottom: 5px;
     }
 
     .transactionsGrid {

@@ -7,6 +7,7 @@ import StyledWrapper from './StyledWrapper';
 import StyledLogin from './StyledLogin';
 import Home from './NestedPages/Home/Home';
 import Transactions from './NestedPages/Transactions/Transactions';
+import AddTransaction from './NestedPages/Transactions/AddTransaction';
 import Notes from './NestedPages/Notes/Notes';
 import AddNote from './NestedPages/Notes/AddNote';
 import Settings from './NestedPages/Settings/Settings';
@@ -33,6 +34,7 @@ const Account = () => {
                     <Routes>
                         <Route path="/" element={<Home user={user} />} />
                         <Route path="/transactions" element={<Transactions />} />
+                        <Route path="/transactions/add-transaction" element={<AddTransaction />} />
                         <Route path="/notes" element={<Notes />} />
                         <Route path="/notes/add-note" element={<AddNote />} />
                         <Route path="/settings" element={<Settings />} />
