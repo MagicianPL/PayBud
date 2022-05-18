@@ -16,6 +16,7 @@ import Account from "./pages/Account/Account";
 import ScrollToTop from "./components/ScrollToTop";
 import UserContext from "./context/UserContext";
 import RequireAuth from "./ProtectedRoutes/RequireAuth";
+import RequireNonAuth from './ProtectedRoutes/RequireNonAuth';
 import React from "react";
 
 function App() {
@@ -35,8 +36,8 @@ function App() {
         <TopNavigation />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/signup" element={<SignUpForm />} />
-          <Route path="/signin" element={<SignInForm />} />
+          <Route path="/signup" element={<RequireNonAuth><SignUpForm /></RequireNonAuth>} />
+          <Route path="/signin" element={<RequireNonAuth><SignInForm /></RequireNonAuth>} />
           <Route path="/account/*" element={<RequireAuth><Account /></RequireAuth>} />
         </Routes>
       </HashRouter>

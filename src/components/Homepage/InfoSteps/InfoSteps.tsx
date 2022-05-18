@@ -43,8 +43,8 @@ const InfoSteps = () => {
                 <img src={transactions} alt="Transactions Thumbnail" />
             </div>
             </div>
-            <p className={`footer ${inViewFirst && "visible"}`} ref={firstRef}>Chcesz tworzyć notatki nie generując linków? Żaden problem!</p>
-            <p className={`footer second ${inViewSecond && "visible"}`} ref={secondRef}>W Paylink to Ty masz pełną kontrolę - możesz używać konta wyłącznie jako swój osobisty system zarządzania.</p>
+            <p className={`footer ${inViewFirst && "visible"}`} ref={firstRef}>Chcesz tworzyć notatki nie generując transakcji? Żaden problem!</p>
+            <p className={`footer second ${inViewSecond && "visible"}`} ref={secondRef}>W PayBud to Ty masz pełną kontrolę - możesz używać konta wyłącznie do samych notatek!</p>
             <StyledButton><Link to="/signup">Zakładam konto</Link></StyledButton>
         </StyledWrapper>
     );
