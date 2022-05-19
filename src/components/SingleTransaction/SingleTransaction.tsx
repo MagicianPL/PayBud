@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { RiInboxArchiveLine } from 'react-icons/ri';
 import { BiNote } from 'react-icons/bi';
 import { AiOutlineEdit } from 'react-icons/ai';
@@ -39,7 +39,7 @@ const SingleTransaction: React.FC<IProps> = ({ archived, title, amount, status, 
             </div>
             <p><strong>{title}</strong></p>
             <p>{amount ? `Kwota: ${amount} zł` : 'Kwota: -'}</p>
-            <p>Notatki ({notes.length})</p>
+            <p><Link to={`/account/notes/oftransaction/${id}`}>Notatki ({notes.length})</Link></p>
             { !archived ?
             <p className="payed">{status}</p>
             :

@@ -10,6 +10,7 @@ import Transactions from './NestedPages/Transactions/Transactions';
 import AddTransaction from './NestedPages/Transactions/AddTransaction';
 import Notes from './NestedPages/Notes/Notes';
 import AddNote from './NestedPages/Notes/AddNote';
+import NotesOfTransaction from './NestedPages/Notes/NotesOfTransaction';
 import Settings from './NestedPages/Settings/Settings';
 import Paylink from './NestedPages/Paylink/Paylink';
 import UserContext from '../../context/UserContext';
@@ -37,6 +38,7 @@ const Account = () => {
                         <Route path="/transactions/add-transaction" element={<AddTransaction />} />
                         <Route path="/notes" element={<Notes />} />
                         <Route path="/notes/add-note" element={<AddNote />} />
+                        <Route path="/notes/oftransaction/:transactionId" element={<NotesOfTransaction />} />
                         <Route path="/settings" element={<Settings />} />
                         <Route path="/paylink" element={<Paylink />} />
                     </Routes>
