@@ -10,14 +10,18 @@ const StyledNotesOfTransaction = styled.div`
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
     }
+}
 
-    svg {
-        margin: 0 auto;
-    }
+.notesGrid > svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
     .error {

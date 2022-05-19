@@ -12,10 +12,7 @@ const Notes = () => {
             <StyledPageSubtitle>Twoje notatki</StyledPageSubtitle>
             <StyledButton><Link to="/account/notes/add-note">Dodaj notatkę</Link></StyledButton>
             <div className="notesGrid">
-                <SingleNote />
-                <SingleNote />
-                <SingleNote />
-                <SingleNote />
+                <p>Notatki...</p>
             </div>
         </StyledWrapper>
     );

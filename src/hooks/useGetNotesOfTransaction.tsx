@@ -22,6 +22,7 @@ const useGetNotesOfTransaction = () => {
             if(!res.ok) return setFetchingError(data.message);
     
             //Success
+            console.log(data);
             setNotes(data);
         }, [user.token]
     )
