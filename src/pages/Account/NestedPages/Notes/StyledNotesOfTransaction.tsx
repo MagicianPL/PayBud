@@ -17,7 +17,7 @@ const StyledNotesOfTransaction = styled.div`
     }
 }
 
-.notesGrid > svg {
+.loading svg {
     position: absolute;
     top: 0;
     left: 50%;

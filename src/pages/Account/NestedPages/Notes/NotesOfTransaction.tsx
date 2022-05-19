@@ -22,14 +22,19 @@ const NotesOfTransaction = () => {
         <StyledNotesOfTransaction>
             <StyledPageSubtitle>Notatki</StyledPageSubtitle>
             <div className="notesGrid">
-                { (notes === null && !fetchingError) && <Oval
+                { (notes === null && !fetchingError) &&
+                <div className="loading">
+                <Oval
                 ariaLabel="loading-indicator"
                 height={100}
                 width={100}
                 strokeWidth={5}
                 strokeWidthSecondary={1}
                 color="blue"
-                secondaryColor="white" /> }
+                secondaryColor="white"
+                />
+                </div>
+                }
 
                 { (notes !== null && !fetchingError) &&
                     notes.map((note: any) => <SingleNote key={note._id} titleOfTransaction={note.forTransaction.title} note={note.note} />)

@@ -2,15 +2,15 @@ import { useContext, useState, useCallback } from 'react';
 
 import UserContext from '../context/UserContext';
 
-const useGetNotesOfTransaction = () => {
+const useGetNotesOfUser = () => {
     const [user] = useContext(UserContext);
     const [fetchingError, setFetchingError] = useState("");
     const [notes, setNotes] = useState<any>(null);
 
-    const getNotesOfTransaction = useCallback(
-        async (transactionId: string | undefined) => {
+    const getNotesOfUser = useCallback(
+        async () => {
             //GET Request
-            const res = await fetch(`${process.env.REACT_APP_API_URL}/notes/oftransaction/${transactionId}`, {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/notes/ofuser/${user._id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -23,9 +23,9 @@ const useGetNotesOfTransaction = () => {
     
             //Success
             setNotes(data);
-        }, [user.token]
+        }, [user._id, user.token]
     )
-    return { getNotesOfTransaction, notes, fetchingError };
+    return { getNotesOfUser, notes, fetchingError };
 };
 
-export default useGetNotesOfTransaction;
+export default useGetNotesOfUser;

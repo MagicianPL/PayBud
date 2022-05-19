@@ -16,7 +16,7 @@ const SingleNote: React.FC<IProps> = ({ titleOfTransaction, note }) => {
                 <AiOutlineEdit title='Edytuj' />
                 <AiTwotoneDelete className="delete" title='Usuń' />
             </div>
-            {titleOfTransaction && <p><strong>{titleOfTransaction}</strong></p>}
+            <p><strong>{titleOfTransaction || 'Brak Tytułu'}</strong></p>
             <p className="content">{note}</p>
         </StyledWrapper>
     );

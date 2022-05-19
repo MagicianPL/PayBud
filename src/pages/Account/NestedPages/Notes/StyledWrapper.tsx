@@ -21,6 +21,14 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+    .error {
+        color: red;
+    }
+
+    svg {
+        margin: 0 auto;
+    }
 `;
 
 export default StyledWrapper;
