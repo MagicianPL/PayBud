@@ -16,6 +16,7 @@ const StyledWrapper = styled.div`
         font-size: 20px;
         cursor: pointer;
         bottom: 5px;
+        margin-bottom: 20px;
     }
 
     .transactionsGrid {

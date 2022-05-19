@@ -13,7 +13,7 @@ const StyledPageSubtitle = styled(StyledLogin)`
     }
 
     @media (max-width: 550px) {
-        font-size: 30px;
+        font-size: 23px;
     }
 `;
 

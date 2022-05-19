@@ -21,6 +21,10 @@ const StyledAddTransactionWrapper = styled.div`
             justify-content: space-between;
             margin-bottom: 45px;
 
+            @media (max-width: 670px) {
+              flex-direction: column;
+            }
+
             /* Customize the label (the container) */
 .container {
   display: block;
@@ -34,7 +38,7 @@ const StyledAddTransactionWrapper = styled.div`
   -ms-user-select: none;
   user-select: none;
   width: 100%;
-  max-width: 70px;
+  max-width: 140px;
 }
 
 /* Hide the browser's default radio button */
