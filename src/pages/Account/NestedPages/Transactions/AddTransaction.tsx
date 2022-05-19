@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { BsInfoCircle } from 'react-icons/bs';
 
 import StyledAddTransactionWrapper from './StyledAddTransactionWrapper';
@@ -7,13 +8,23 @@ import Input from '../../../../components/Input/Input';
 import StyledButton from '../../../../components/StyledButton/StyledButton';
 import Modal from '../../../../components/Modal/Modal';
 import useCreateTransaction from '../../../../hooks/useCreateNewTransaction';
+import useEditTransaction from '../../../../hooks/useEditTransaction';
 
 const AddTransaction = () => {
     const { createTransaction, showModal, modalMessage, modalError, onModalClick } = useCreateTransaction();
+    const { editTransaction, showModal: edit_showModal, modalMessage: edit_modalMessage, modalError: edit_modalError, onModalClick: edit_onModalClick } = useEditTransaction();
+    //Query Strings Stuff
+    const [searchParams] = useSearchParams();
+    const transactionId = searchParams.get('transaction');
+    const transactionTitle = searchParams.get('title');
+    const transactionAmount = searchParams.get('amount');
+    const transactionStatus = searchParams.get('status');
+    /****************************************************** */
 
-    const [title, setTitle] = useState("");
-    const [amount, setAmount] = useState("");
-    const [checkedStatus, setCheckedStatus] = useState("Oczekująca");
+    /* If in edit mode states are from previous created transaction */
+    const [title, setTitle] = useState(transactionTitle || "");
+    const [amount, setAmount] = useState(transactionAmount || "");
+    const [checkedStatus, setCheckedStatus] = useState(transactionStatus || "Oczekująca");
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
@@ -29,8 +40,11 @@ const AddTransaction = () => {
 
     return(
         <StyledAddTransactionWrapper>
-            <StyledPageSubtitle>Dodaj transakcję</StyledPageSubtitle>
-            <form onSubmit={(e) => createTransaction(e, {title, amount, checkedStatus})}>
+            <StyledPageSubtitle>{!transactionId ? "Dodaj transakcję" : "Edytuj"}</StyledPageSubtitle>
+            <form onSubmit={(e) => {
+                if(!transactionId) return createTransaction(e, {title, amount, checkedStatus});
+                if(transactionId) return editTransaction(e, {title, amount, checkedStatus, transactionId})
+            }}>
                 <Input id="transaction-title" label="Tytuł Transakcji" onChange={handleTitleChange} value={title} />
                 <Input id="transaction-amount" label="Kwota (opcjonalnie)" type="number" onChange={handleAmountChange} value={amount} />
                 <p>Status Transakcji</p>
@@ -55,6 +69,7 @@ const AddTransaction = () => {
                 Przejdź do transakcji i kliknij w ikonę notatki aby powiązać notatkę z transakcją!
             </p>
             { showModal && <Modal modalMessage={modalMessage} modalError={modalError} onClick={onModalClick} /> }
+            { edit_showModal && <Modal modalMessage={edit_modalMessage} modalError={edit_modalError} onClick={edit_onModalClick} />}
         </StyledAddTransactionWrapper>
     );
 };
