@@ -65,7 +65,7 @@ const Transactions = () => {
 
             {/* fetchingError is not falsy */}
             {fetchingError &&
-            <p>{fetchingError}</p>
+            <p className="error">{fetchingError}</p>
             }
         </StyledWrapper>
     );

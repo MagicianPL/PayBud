@@ -40,6 +40,10 @@ const StyledWrapper = styled.div`
     svg {
         margin: 0 auto;
     }
+
+    .error {
+        color: red;
+    }
 `;
 
 export default StyledWrapper;

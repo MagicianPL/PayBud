@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 const StyledNotesOfTransaction = styled.div`
 
-button {
-    position: relative;
-    bottom: 25px;
-    font-size: 18px;
-}
-
 .notesGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -20,7 +14,15 @@ button {
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
     }
+
+    svg {
+        margin: 0 auto;
+    }
 }
+
+    .error {
+        color: red;
+    }
 `;
 
 export default StyledNotesOfTransaction;
