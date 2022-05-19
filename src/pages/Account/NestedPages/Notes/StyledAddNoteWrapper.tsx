@@ -27,6 +27,14 @@ const StyledAddNoteWrapper = styled.div`
             font-size: 28px;
         }
     }
+
+    .loading svg {
+        margin: 0 auto;
+    }
+
+    .error {
+        color: red;
+    }
 `;
 
 export default StyledAddNoteWrapper;

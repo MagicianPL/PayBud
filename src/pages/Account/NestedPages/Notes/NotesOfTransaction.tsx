@@ -37,7 +37,7 @@ const NotesOfTransaction = () => {
                 }
 
                 { (notes !== null && !fetchingError) &&
-                    notes.map((note: any) => <SingleNote key={note._id} titleOfTransaction={note.forTransaction.title} note={note.note} />)
+                    notes.map((note: any) => <SingleNote key={note._id} noteId={note._id} titleOfTransaction={note.forTransaction.title} note={note.note} />)
                 }
 
                 { (notes === null && fetchingError) && <p className="error">{fetchingError}</p>}

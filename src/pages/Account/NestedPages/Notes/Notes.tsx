@@ -33,7 +33,7 @@ const Notes = () => {
                 <>
                     <StyledButton><Link to="/account/notes/add-note">Dodaj notatkę</Link></StyledButton>
                     <div className="notesGrid">
-                    {notes.map((note: any) => <SingleNote titleOfTransaction={note.forTransaction?.title} note={note.note} />)}
+                    {notes.map((note: any) => <SingleNote key={note._id} noteId={note._id} titleOfTransaction={note.forTransaction?.title} note={note.note} />)}
                     </div>
                 </>
             }
