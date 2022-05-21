@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 import StyledWrapper from './StyledWrapper';
 import StyledButton from '../../StyledButton/StyledButton';
-import generatePaylink from '../../../assets/generatePaylink.jpg';
-import transactions from '../../../assets/transactions.jpg';
+import transactionThumbnail from '../../../assets/transactionThumbnail.png';
+import noteThumbnail from '../../../assets/noteThumbnail.png';
 
 const InfoSteps = () => {
     const { ref: firstRef, inView: inViewFirst } = useInView({
@@ -23,12 +23,12 @@ const InfoSteps = () => {
             <div className="flex">
             <div>
                 <GiReceiveMoney />
-                <p>Wpisujesz wszystkie dane oraz kwotę, prosto i szybko generujesz link do płatności, który przesyłasz klientowi.</p>
-                <p> Po opłaceniu dostajesz powiadomienie sms, a pieniądze trafiają na Twoje konto!</p>
+                <p>Tworząc nową transakcję wpisujesz jej tytuł, opcjonalnie kwotę oraz status.</p>
+                <p>W każdej chwili możesz przeglądać wszystkie swoje transakcje oraz je edytować lub zarchiwizować!</p>
                 <p>Przyjemnie, łatwo i intuicyjnie!</p>
             </div>
             <div>
-                <img src={generatePaylink} alt="Generating Paylink Thumbnail" />
+                <img src={transactionThumbnail} alt="Transaction Thumbnail" />
             </div>
             </div>
 
@@ -36,11 +36,11 @@ const InfoSteps = () => {
             <div>
                 <FaUserTie />
                 <p>Paylink to także Twój osobisty Asystent Płatności!</p>
-                <p>Każdy wygenerowany link, to osobna transakcja, do której możesz przypiąć notatki oraz nimi zarządzać.</p>
+                <p>Do każdej wygenerowanej transakcji możesz przypinać notatki oraz nimi zarządzać wedle swoich potrzeb.</p>
                 <p>Twoja sprzedaż w jednym miejscu - Z Paylink to proste!</p>
             </div>
             <div>
-                <img src={transactions} alt="Transactions Thumbnail" />
+                <img src={noteThumbnail} alt="Note Thumbnail" />
             </div>
             </div>
             <p className={`footer ${inViewFirst && "visible"}`} ref={firstRef}>Chcesz tworzyć notatki nie generując transakcji? Żaden problem!</p>
