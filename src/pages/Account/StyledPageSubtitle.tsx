@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import StyledLogin from './StyledLogin';
 
 const StyledPageSubtitle = styled(StyledLogin)`
+    && {
     margin: 0 auto 30px auto;
     font-size: 45px;
     font-weight: bold;
@@ -15,6 +16,7 @@ const StyledPageSubtitle = styled(StyledLogin)`
     @media (max-width: 550px) {
         font-size: 23px;
     }
+}
 `;
 
 export default StyledPageSubtitle;
