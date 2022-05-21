@@ -41,6 +41,14 @@ const StyledWrapper = styled.div`
     footer {
         margin-top: 45px;
     }
+
+    .error {
+        color: red;
+    }
+
+    svg {
+        margin: 0 auto;
+    }
 `;
 
 export default StyledWrapper;
