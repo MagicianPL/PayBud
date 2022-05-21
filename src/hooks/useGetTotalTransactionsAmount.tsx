@@ -16,7 +16,6 @@ const useGetTotalTransactionsAmount = () => {
             };
 
             setLoadingAmount(false);
-            console.log(data);
             setAmount(data.transactions);
         }, []);
 
