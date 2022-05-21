@@ -79,6 +79,13 @@ const StyledWrapper = styled.div`
         clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
     }
 }
+
+.loadingAmount {
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    align-items: center;
+}
 `;
 
 export default StyledWrapper;

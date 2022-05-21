@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
+import { Oval } from 'react-loader-spinner';
 
 import StyledWrapper from './StyledWrapper';
 import Logo from '../../Logo/Logo';
 import StyledButton from '../../StyledButton/StyledButton';
+import useGetTotalTransactionsAmount from '../../../hooks/useGetTotalTransactionsAmount';
 
 const About = () => {
+    const { getTotalTransactionsAmount, loadingAmount, amount, amountError } = useGetTotalTransactionsAmount();
+
+    useEffect(() => {
+        getTotalTransactionsAmount()
+    }, [getTotalTransactionsAmount]);
+
     return(
         <StyledWrapper>
             <div className="flex">
@@ -24,14 +32,30 @@ const About = () => {
                     <Logo />
                 </div>
             </div>
-            <InView triggerOnce threshold={1}>
-            {({inView, ref, entry}) => {
-                return (
-                    <p ref={ref} className="counter">Wygenerowaliśmy już <strong>{inView ? <CountUp end={26} duration={1} /> : 0} transakcji</strong></p>
-                );
+
+            { loadingAmount && <div className="loadingAmount"><Oval
+            ariaLabel="loading-indicator"
+            height={70}
+            width={70}
+            strokeWidth={5}
+            strokeWidthSecondary={1}
+            color="blue"
+            secondaryColor="white" /></div> }
+
+            { (!loadingAmount && amount) &&
+                <InView triggerOnce threshold={1}>
+                {({inView, ref, entry}) => {
+                    return (
+                        <p ref={ref} className="counter">Wygenerowaliśmy już <strong>{inView ? <CountUp end={amount} duration={1} /> : 0} transakcji</strong></p>
+                    );
+                    }
                 }
+                </InView>
             }
-            </InView>
+
+            { (!loadingAmount && amountError) &&
+                <p className="counter">Wygenerowaliśmy już <strong>całe mnóstwo transakcji</strong></p>
+            }
         </StyledWrapper>
     );
 };
