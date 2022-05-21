@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-    h1 {
-        text-align: left;
-        color: red;
-        font-size: 20px;
-        margin-bottom: 30px;
+    p {
+        margin-bottom: 25px;
+        font-size: 22px;
+        color: ${({theme}) => theme.colors.primary};
+
+        @media(max-width: 550px) {
+            font-size: 16px;
+            text-align: left;
+        }
+
+        span {
+            font-weight: bold;
+        }
     }
 `;
 
