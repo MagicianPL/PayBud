@@ -47,6 +47,11 @@ const StyledWrapper = styled.div`
 }
 
 .logo {
+    @media(max-width: 700px) {
+        max-width: 210px;
+    }
+
+
     @media (min-width: 901px) {
         align-self: flex-start;
     }

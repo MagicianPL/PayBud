@@ -7,6 +7,12 @@ const StyledAddNoteWrapper = styled.div`
         margin-bottom: 20px;
     }
 
+    .withTransaction {
+        @media(max-width: 450px) {
+            font-size: 12px;
+        }
+    }
+
     .tip {
         margin-top: 50px;
         font-weight: bold;
