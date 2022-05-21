@@ -2,12 +2,12 @@ import React from 'react';
 
 import StyledPageSubtitle from '../../StyledPageSubtitle';
 
-const Settings = () => {
+const Informations = () => {
     return(
         <div>
-            <StyledPageSubtitle>Ustawienia</StyledPageSubtitle>
+            <StyledPageSubtitle>Informacje</StyledPageSubtitle>
         </div>
     );
 };
 
-export default Settings;
+export default Informations;
