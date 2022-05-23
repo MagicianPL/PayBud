@@ -35,9 +35,9 @@ const InfoSteps = () => {
             <div className="flex">
             <div>
                 <FaUserTie />
-                <p>Paylink to także Twój osobisty Asystent Płatności!</p>
+                <p>PayBud to także Twój osobisty Asystent Płatności!</p>
                 <p>Do każdej wygenerowanej transakcji możesz przypinać notatki oraz nimi zarządzać wedle swoich potrzeb.</p>
-                <p>Twoja sprzedaż w jednym miejscu - Z Paylink to proste!</p>
+                <p>Twoja sprzedaż w jednym miejscu - Z PayBud to proste!</p>
             </div>
             <div>
                 <img src={noteThumbnail} alt="Note Thumbnail" />
