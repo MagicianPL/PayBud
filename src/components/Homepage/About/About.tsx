@@ -16,6 +16,18 @@ const About = () => {
         getTotalTransactionsAmount()
     }, [getTotalTransactionsAmount]);
 
+    //It takes number as an argument and returns correct genitive on JSX
+    const correctGenitive = (amount: number) => {
+        const arr = amount.toString().split("");
+        const lastNum = arr[arr.length - 1];
+
+        if(+lastNum === 1 || +lastNum === 5 || +lastNum === 6 || +lastNum === 7 || +lastNum === 8 || +lastNum === 9 || +lastNum === 0) {
+            return 'transakcji';
+        } else {
+            return 'transakcje';
+        }
+    };
+
     return(
         <StyledWrapper>
             <div className="flex">
@@ -46,7 +58,7 @@ const About = () => {
                 <InView triggerOnce threshold={1}>
                 {({inView, ref, entry}) => {
                     return (
-                        <p ref={ref} className="counter">Wygenerowaliśmy już <strong>{inView ? <CountUp end={amount} duration={1} /> : 0} transakcji</strong></p>
+                        <p ref={ref} className="counter">Wygenerowaliśmy już <strong>{inView ? <CountUp end={amount} duration={1} /> : 0} {correctGenitive(amount)}</strong></p>
                     );
                     }
                 }
