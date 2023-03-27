@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/PayBud/static/css/main.e2c4f587.css",
-    "main.js": "/PayBud/static/js/main.2c200179.js",
+    "main.js": "/PayBud/static/js/main.700e1574.js",
     "static/media/logo.png": "/PayBud/static/media/logo.041984035c692df62ede.png",
     "static/media/noteThumbnail.png": "/PayBud/static/media/noteThumbnail.cf6d05564bdfe50171aa.png",
     "static/media/transactionThumbnail.png": "/PayBud/static/media/transactionThumbnail.a3d5f88e404df27c2169.png",
     "index.html": "/PayBud/index.html",
     "main.e2c4f587.css.map": "/PayBud/static/css/main.e2c4f587.css.map",
-    "main.2c200179.js.map": "/PayBud/static/js/main.2c200179.js.map"
+    "main.700e1574.js.map": "/PayBud/static/js/main.700e1574.js.map"
   },
   "entrypoints": [
     "static/css/main.e2c4f587.css",
-    "static/js/main.2c200179.js"
+    "static/js/main.700e1574.js"
   ]
 }
